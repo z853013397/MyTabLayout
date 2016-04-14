@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flowlayout="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toorbar" />
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/whole_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/symptom_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/diagnosis_result_top_textview_shape"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingBottom="@dimen/little_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/little_margin"
+                    android:text="@string/dr_co_tips"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/front16" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height40">
+
+                    <TextView
+                        android:id="@+id/bs_symptom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_toLeftOf="@+id/img"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxEms="22"
+                        android:paddingBottom="@dimen/small_margin"
+                        android:paddingTop="@dimen/small_margin"
+                        android:singleLine="true"
+                        android:text="@string/ispansui_syptom"
+                        android:textColor="@color/text_color2"
+                        android:textSize="@dimen/front14" />
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@mipmap/right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.zeyuan.kyq.widget.FlowLayout
+                        android:id="@+id/fls"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        flowlayout:horizontal_spacing="12dp"
+                        flowlayout:vertical_spacing="12dp" />
+
+                    <Button
+                        android:id="@+id/confirm"
+                        style="@style/bottom_button"
+                        android:layout_width="140dp"
+                        android:layout_height="@dimen/height32"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:text="@string/confirm"
+                        android:textSize="@dimen/front18" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/maybe_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height32"
+                    android:background="@color/diagnosis_gray"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/small_margin"
+                    android:text="@string/maybe_result"
+                    android:textSize="@dimen/front14"
+                    android:visibility="visible" />
+
+
+                <com.zeyuan.kyq.widget.MyListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/line_color"
+                    android:dividerHeight="1dp"
+                    android:scrollbars="none" />
+
+                <View style="@style/line_style" />
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/height32">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+                <!--android:text="@string/simalar_case"-->
+                <!--android:textColor="@color/light_red"-->
+                <!--android:textSize="@dimen/front18" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/more"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+                <!--android:text="@string/more"-->
+                <!--android:textColor="@color/light_red"-->
+                <!--android:textSize="@dimen/front18" />-->
+                <!--</RelativeLayout>-->
+
+                <!--<com.zeyuan.kyq.widget.MyListView-->
+                <!--android:id="@+id/bottom_listview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="145dp"-->
+                <!--android:divider="@color/line_color"-->
+                <!--android:dividerHeight="2dp"-->
+                <!--android:scrollbars="none" />-->
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View style="@style/line_style" />
+
+        <Button
+            android:id="@+id/confirm_systom"
+            style="@style/bottom_button"
+            android:text="@string/confirm_symptom"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        applicationId "com.zeyuan.kyq"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 3
+        versionName "1.2"
+    }
+
+//    注意 版本号的格式是 1.0 类似的
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "zeyuan"
+            keyAlias "China"
+            keyPassword "zeyuanwangluo"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+//    buildTypes {
+//        debug {
+//            signingConfig signingConfigs.release
+//        }
+//        release {
+//            signingConfig signingConfigs.release
+//        }
+//    }
+
+
+}
+
+
+
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gson-2.2.4.jar')
+    //cdn的
+    compile files('libs/open_sdk_r5276_lite.jar')
+    //qq登录
+    compile files('libs/libammsdk.jar')
+    //微信的
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.squareup.okhttp:okhttp:2.6.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.aliyun.dpa:oss-android-sdk:1.4.0'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.commit451:PhotoView:1.2.4'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.bigkoo:alertview:1.0.2'
+//    compile project(':alertview')
+    compile files('libs/MobCommons.jar')
+    compile files('libs/ShareSDK-QQ-2.6.6.jar')
+    compile files('libs/MobTools.jar')
+    compile files('libs/ShareSDK-Core-2.6.6.jar')
+    compile files('libs/ShareSDK-Wechat-2.6.6.jar')
+    compile files('libs/ShareSDK-Socialization-1.0.7.jar')
+    compile files('libs/ShareSDK-TencentWeibo-2.6.6.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.6.6.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.6.6.jar')
+    compile 'com.android.support:cardview-v7:23.1.1'
+    compile files('libs/commons-beanutils-1.9.2.jar')
+}

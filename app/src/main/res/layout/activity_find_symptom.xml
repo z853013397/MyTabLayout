@@ -1,0 +1,185 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toorbar" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/descripe"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/margintop15"-->
+        <!--android:text="@string/current_step"/>-->
+
+        <!--<RadioGroup-->
+        <!--android:id="@+id/top_rg"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/margintop15"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:paddingBottom="@dimen/paddingbottom10"-->
+        <!--android:paddingRight="@dimen/paddingright10">-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/after_operation"-->
+        <!--style="@style/find_symptom_button"-->
+        <!--android:text="@string/after_operation"/>-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/baxiang_cure"-->
+        <!--style="@style/find_symptom_button"-->
+        <!--android:text="@string/baxiang_cure"/>-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/radiation_therapy"-->
+        <!--style="@style/find_symptom_button"-->
+        <!--android:text="@string/radiation_therapy"/>-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/chemotherapeutics"-->
+        <!--style="@style/find_symptom_button"-->
+        <!--android:text="@string/chemotherapeutics"/>-->
+
+        <!--<RadioButton-->
+        <!--android:id="@+id/empty_time"-->
+        <!--style="@style/find_symptom_button"-->
+        <!--android:text="@string/empty_time"/>-->
+        <!--</RadioGroup>-->
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:background="@color/main_color"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ScrollView
+                android:id="@+id/body_listview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <RadioGroup
+                    android:id="@+id/left_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/scroll_color"
+                    android:orientation="vertical">
+
+
+                    <RadioButton
+                        android:id="@+id/cancer_progress"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_cancer_progress_selector"
+                        android:text="@string/cancer_progress" />
+
+                    <RadioButton
+                        android:id="@+id/blood"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_blood_selector"
+                        android:text="@string/blood" />
+
+                    <RadioButton
+                        android:id="@+id/all_body"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_all_body_selector"
+                        android:text="@string/all_body" />
+
+                    <RadioButton
+                        android:id="@+id/head"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_head_selector"
+                        android:text="@string/head" />
+
+                    <RadioButton
+                        android:id="@+id/neck"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_neck_selector"
+                        android:gravity="center"
+                        android:text="@string/neck" />
+
+                    <RadioButton
+                        android:id="@+id/hand"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_hand_selector"
+                        android:text="@string/hand" />
+
+                    <RadioButton
+                        android:id="@+id/chest"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_chest_selector"
+                        android:text="@string/chest" />
+
+                    <RadioButton
+                        android:id="@+id/abdomen"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_abdomen_selector"
+                        android:text="@string/abdomen" />
+
+                    <RadioButton
+                        android:id="@+id/pelvis"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_pelvis_selector"
+                        android:text="@string/pelvis" />
+
+                    <RadioButton
+                        android:id="@+id/complication"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_complication_selector"
+                        android:text="@string/complication" />
+
+                    <RadioButton
+                        android:id="@+id/blood_test"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_blood_selector"
+                        android:text="血常规" />
+
+                    <RadioButton
+                        android:id="@+id/urine"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_uirne_selector"
+                        android:text="尿常规" />
+
+                    <RadioButton
+                        android:id="@+id/fb_test"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_fbtest_selector"
+                        android:text="粪便常规" />
+
+                    <RadioButton
+                        android:id="@+id/gangg"
+                        style="@style/find_symptom_button_left"
+                        android:drawableTop="@drawable/find_symptom_gangg_selector"
+                        android:text="肝功能" />
+
+
+                </RadioGroup>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/body_detail_listview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:divider="@color/line_color"
+                android:dividerHeight="0dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

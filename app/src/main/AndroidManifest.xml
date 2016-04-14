@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zeyuan.kyq">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- 这3个是阿里云图片上传的 -->
+    <meta-data
+        android:name="com.alibaba.app.ossak"
+        android:value="jlovT26yDJA7WvsN" />
+    <meta-data
+        android:name="com.alibaba.app.osssk"
+        android:value="73FJdsSKCrGCa3c1dgxqJW3thQrHCX" />
+    <meta-data
+        android:name="com.alibaba.app.ossbucketname"
+        android:value="bucketn1" />
+
+    <!--
+    android:allowBackup="true"
+        android:name=".app.GlobalData"
+    -->
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!--
+            	Adapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter的类，
+            	这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            <meta-data android:name="Adapter" android:value="cn.sharesdk.demo.MyAdapter" />
+            -->
+
+
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- QQ客户端回调 -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ResultReceiver"
+            android:noHistory="true">
+
+            <!--
+            	如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再开发者应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter android:priority="1000">
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".view.SplashActivity" -->
+        <!-- android:label="@string/app_name" -->
+        <!-- android:launchMode="singleTask" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".view.LoginActivity" />
+        <activity
+            android:name=".view.PatientDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ForumDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.StepDetailActivity"
+            android:label="@string/title_activity_step_detail"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.PictureShowActivity" />
+        <activity
+            android:name=".view.ReleaseForumActivity"
+            android:label="@string/title_activity_release_forum"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.MoreCircleActivity"
+            android:label="@string/title_activity_search_circle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.CircleActivity"
+            android:label="@string/title_activity_circle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.MyActivity"
+            android:label="@string/title_activity_my"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.MyForumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.FindSymtomActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.SelectPictureActivity" />
+        <activity
+            android:name=".view.ShowPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoTitle" />
+        <activity
+            android:name=".view.DiagnosisResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ResultDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.RecordSymptomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 编辑阶段 -->
+        <activity
+            android:name=".view.EditStepActivity"
+            android:screenOrientation="portrait" />
+        <!-- 指标记录 -->
+        <activity
+            android:name=".view.RecordZhibiaoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 从主页中更多进入的界面 -->
+        <activity
+            android:name=".view.MainMoreActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 从主页中副作用进入的页面 -->
+        <activity
+            android:name=".view.SideEffectActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 方案详情 -->
+        <activity
+            android:name=".view.CaseDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 建立档案 -->
+        <activity
+            android:name=".view.PatientInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 这个是登录页 -->
+        <activity
+            android:name=".view.GuideActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+
+        <!-- qq登录配置 -->
+
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104903720" />
+            </intent-filter>
+        </activity>
+        <!-- qq登录配置 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <data android:scheme="tencent1104903720" />
+        </activity>
+
+        <!-- 微信登录配置 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/title_activity_search_circle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ArticleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.WSZLActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.DrugActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.EffectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ShowImageActivity"
+            android:theme="@style/GgzImageScale" />
+        <!-- 我的评论和回复 -->
+        <activity android:name=".view.MyReplyActivity" />
+        <activity
+            android:name=".view.MyFlwForumActivity"
+            android:label="@string/title_activity_my_flw_forum" />
+        <activity android:name=".view.MyFosCircleActivity" />
+        <activity
+            android:name=".view.AboutActivity"
+            android:label="@string/title_activity_about"></activity>
+
+        <!-- 相似案例列表-->
+        <activity android:name=".view.SCListActivity" />
+        <!--<receiver-->
+            <!--android:name=".app.ConnectionChangeReceiver"-->
+            <!--android:label="NetworkConnection">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+    </application>
+
+</manifest>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dialog_background">#9a0a0a29</color>
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+
+    <color name="main_grad_start">#9a0a0a29</color>
+    <color name="main_grad_end">#000a0a29</color>
+
+    <color name="light_red">#f59599</color>
+
+    <!-- e12f2f-->
+    <color name="red">#e12f2f</color>
+    <color name="reds">#f44f4f</color>
+
+    <color name="light_green">#17cbd1</color>
+    <color name="light_yellow">#FFDC73</color>
+    <color name="purple">#DAB2D3</color>
+    <color name="white">#ffffff</color>
+    <color name="white_gray">#8be5e8</color>
+    <!-- 建立档案中的选中后的颜色变化-->
+
+    <color name="scroll_color">#F4F4F4</color>
+    <color name="daf">#F5F5F5</color>
+    <color name="main_bottom_color">#404040</color>
+    <color name="nurse_change">#18BFC5</color>
+    <color name="nurse_change_trans">#18BFC5</color>
+    <color name="window_backgroud">#ffffff</color>
+    <color name="black">#000000</color>
+    <!--这个是主页中第一个圆圈中 的背景颜色-->
+    <color name="main_title1">#30BCBF</color>
+    <color name="main_title2">#4d30BCBF</color>
+    <color name="text_stroke_color">#e1e1e1</color>
+
+    <color name="text_stroke_color2">#cfcfcf</color>
+    <!-- 重要文字  普通段落引导词  辅助级次要文字-->
+    <color name="text_color_1">#222222</color>
+    <color name="text_color2">#4c4c4c</color>
+    <color name="text_color3">#a1a1a1</color>
+    <!--分割区域底色-->
+    <color name="main_color">#F5F5F5</color>
+
+    <!--分割线-->
+    <color name="line_color">#ebebeb</color>
+
+
+    <color name="listview_dv_item">#F5F5F5</color>
+
+    <color name="solid_color">#F5F5F5</color>
+
+    <color name="diagnosis_gray">#F0F0F0</color>
+    <color name="edit_soild">#f8f8f8</color>
+
+    <color name="qq_login">#029eff</color>
+    <color name="qq_login1">#FF0378C1</color>
+
+    <color name="weixin_login">#3ec977</color>
+<!--FF0378C1-->
+    <color name="weixin_login1">#FF2E8753</color>
+
+    <color name="dialog_backgroud">#b3000000</color>
+    <!--所有的选择框的颜色-->
+    <color name="choose_square_color">#dcdcdc</color>
+
+    <!--帖子姓名的颜色 -->
+    <color name="item_forum_name">#9f9f9f</color>
+    <!-- 标题的颜色-->
+    <color name="item_forum_title">#666666</color>
+
+    <color name="time_color">#c5c5c5</color>
+
+    <color name="case_expandlistview_group_title">#f9f9f9</color>
+    <color name="text_color4">#8b8b8b</color>
+
+    <color name="title_color">#2e2e2e</color>
+    <color name="text_color5">#1c1c1c</color>
+
+    <color name="home_text">#1c1c1c</color>
+
+
+    <color name="home_bg01">#e9e9e9</color>
+    <color name="home_viewpager_item_nick">#848484</color>
+
+</resources>

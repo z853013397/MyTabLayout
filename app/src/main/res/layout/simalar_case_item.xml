@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="@dimen/little_margin"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="@dimen/little_margin"
+        android:background="@drawable/releaseforum_top_radiobutton_shape_default">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+             <com.zeyuan.kyq.widget.CircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/default_avatar" />
+
+            <TextView
+                android:id="@+id/forum_host_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dp"
+                android:layout_toRightOf="@id/avatar"
+                android:text="因为热爱"
+                android:textColor="@color/home_viewpager_item_nick"
+                android:textSize="@dimen/front12" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/forum_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:lines="2"
+            android:text="zhege "
+            android:textColor="@color/text_color_1"
+            android:textSize="@dimen/front16" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/more_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/home_viewpager_more_bg"
+        android:drawablePadding="@dimen/drawable_padding"
+        android:drawableRight="@mipmap/home_viewpager_more_ic"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="更多"
+        android:textColor="@color/white"
+        android:textSize="@dimen/front10" />
+</RelativeLayout>

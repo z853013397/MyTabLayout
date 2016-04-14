@@ -1,0 +1,310 @@
+<resources>
+    <string name="app_name">抗癌圏</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_patient_detail">PatientDetailActivity</string>
+    <string name="title_activity_diagnose_result">DiagnoseResult</string>
+    <string name="title_activity_tiezi_detail">TieziDetailActivity</string>
+    <string name="title_activity_step_detail">StepDetailActivity</string>
+    <string name="title_activity_release_forum">ReleaseForumActivity</string>
+    <string name="title_activity_search_circle">SearchCircleActivity</string>
+
+    <string name="find_circle">找圈子</string>
+    <string name="add_follow">加关注</string>
+    <string name="already_follow">已关注</string>
+
+
+    <!-- z这个是阶段详情的字符串-->
+    <string name="step_detail">阶段详情</string>
+    <string name="symptom">症状</string>
+    <string name="decribe">描述</string>
+    <string name="medic_cure">药物治疗</string>
+    <string name="symptom_record">症状记录</string>
+    <string name="index_record">指标记录</string>
+    <string name="CEA">CEA</string>
+    <string name="main_cancer">主肿瘤</string>
+    <string name="second_cancer">副肿瘤</string>
+    <string name="add_naozhuan">新增脑转</string>
+    <string name="record_symptom">症状记录</string>
+    <string name="update_step">更新阶段</string>
+    <string name="null_step">空窗期</string>
+
+    <!-- z这个是发布帖子的字符串-->
+    <string name="release_forum">发布帖子</string>
+    <string name="must_focus">将帖子发布到</string>
+    <string name="must_focus2">(必填):</string>
+    <string name="forum_tip">注：只能将帖子发布到已关注的圈子</string>
+    <string name="forum_title">我是标题(必填)</string>
+    <string name="forum_content">我是内容(不少于10个字)</string>
+    <string name="clear_all">清楚所有</string>
+    <string name="import_case">导入病例</string>
+    <string name="hide_name">真实姓名会自动隐藏</string>
+    <string name="title_activity_circle">CircleActivity</string>
+    <string name="title_activity_my">MyActivity</string>
+
+    <!--我的-->
+    <string name="my">我的</string>
+    <string name="circle">圈子</string>
+    <string name="forum">帖子</string>
+    <string name="latest_forum">最新发布的帖子</string>
+
+    <string name="collection">收藏</string>
+    <string name="latest_collection">最新收藏</string>
+    <string name="title_activity_my_forum">MyForumActivity</string>
+
+    <!--我的帖子-->
+    <string name="my_forum">我的帖子</string>
+    <string name="release_forums">发布的帖子</string>
+    <string name="reply">评论/回复</string>
+
+
+    <!-- 帖子详情-->
+    <string name="forum_detail">帖子详情</string>
+    <string name="want_say">我想说...</string>
+
+
+    <!-- 查症状-->
+
+
+    <string name="find_symptom">查症状</string>
+    <!--上面的-->
+    <string name="after_operation">手术</string>
+    <string name="baxiang_cure">靶向</string>
+    <string name="radiation_therapy">放疗</string>
+    <string name="chemotherapeutics">化疗</string>
+    <string name="empty_time">空窗</string>
+    <!--左边的-->
+    <string name="body">身体</string>
+    <string name="hand">四肢</string>
+    <string name="neck">颈部</string>
+    <string name="head">头部</string>
+    <string name="foot">脚部</string>
+    <string name="cancer_progress">肿瘤进展</string>
+    <string name="blood">血液</string>
+    <string name="all_body">全身</string>
+    <string name="chest">胸部</string>
+    <string name="abdomen">腹部</string>
+    <string name="pelvis">骨盆</string>
+
+
+    <string name="patient_detail">患者详情</string>
+    <string name="recommend_friend">推荐给好友</string>
+    <string name="use_help">使用帮助</string>
+
+
+    <!-- 诊断结果-->
+    <string name="diagnosis_result">诊断结果</string>
+    <string name="confirm">确定</string>
+
+    <string name="title_activity_patient_info">PatientInfoActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="cancer_type">癌症种类</string>
+    <string name="choose_cancer_type">请选择癌症种类</string>
+    <string name="choose_patient_location">请选择患者所在地:</string>
+    <string name="next_step">下一步</string>
+    <string name="shenzhen">广东深圳</string>
+    <string name="cancer_case">分期情况</string>
+    <string name="last_step">上一步</string>
+    <string name="finish">完成</string>
+    <!-- 这个是症状记录的-->
+    <string name="choose_symtopm_time">选择症状,时间</string>
+    <string name="add_tip">添加备注</string>
+    <!-- 这个是肿瘤发展里-->
+    <string name="confirm_tiaojian">确诊条件:</string>
+    <string name="first_cure_case">可能的治疗方案</string>
+    <string name="other_case">更多治疗方案</string>
+    <string name="dec">描述</string>
+    <string name="ispansui_syptom">是否伴随以下症状:</string>
+    <string name="maybe_result">可能是以下结果</string>
+    <string name="simalar_case">相似案例</string>
+    <string name="more">更多</string>
+    <string name="current_step">当前所处阶段</string>
+    <string name="patient_bingli">患者病例</string>
+    <string name="click_patientbingli">点击查看患者病例详情</string>
+    <string name="the_all_huifu">全部回帖(%1$s)</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="main">主页</string>
+    <string name="recovery">康复与营养</string>
+    <string name="knowledge">知识库</string>
+    <string name="weixinlogin">微信登录</string>
+    <string name="qqlogin">QQ 登录</string>
+
+    <!--这个是下拉刷新的-->
+    <string name="header_hint_refresh_normal">下拉刷新</string>
+    <string name="header_hint_refresh_ready">松开立即刷新</string>
+    <string name="header_hint_refresh_loading">正在刷新&#8230;</string>
+    <string name="header_hint_refresh_time">最后刷新时间：</string>
+    <string name="footer_hint_load_normal">加载更多</string>
+    <string name="footer_hint_load_ready">Release to load more</string>
+    <string name="follow_success">关注成功</string>
+    <string name="do_success">操作成功</string>
+    <string name="empty_reply">回复内容不能为空</string>
+    <string name="comment_reply">评论/回复</string>
+    <string name="city_circle">同城圈</string>
+    <string name="cancer_circle">抗癌圏</string>
+    <string name="patient_info">患者信息</string>
+    <string name="choose_city">请选择城市</string>
+    <string name="save">保存</string>
+    <string name="case_detail">方案详情</string>
+    <string name="result_detail">结果详情</string>
+    <string name="edit_step">编辑阶段</string>
+    <string name="cancer_dev">肿瘤发展</string>
+    <string name="add_futu_med">添加至计划用药</string>
+    <string name="login_success">登录成功</string>
+    <string name="cret_info_sucess">创建档案成功</string>
+    <string name="loadding_failed">加载失败</string>
+    <string name="fail_file">文件路径出错</string>
+    <string name="base_info">基本信息</string>
+    <string name="name">真实姓名</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="location">所在地</string>
+    <string name="cancer_des">病情描述</string>
+    <string name="save_success">保存成功</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="comm_name">通用名称：%1$s</string>
+    <string name="english_name">英文名称：%1$s</string>
+    <string name="shop_name">商品名称：%1$s</string>
+    <string name="choose_digit">请选择分期</string>
+    <string name="end_first_drugs">最后有效的靶向方案</string>
+    <string name="end_second_drugs">最后有效的化疗方案</string>
+    <string name="case_number">方案一</string>
+    <string name="confirm_zl">资料确认</string>
+    <string name="confirm_lastest">确认为最新</string>
+    <string name="complication">并发症</string>
+    <string name="dr_co_tips">你选择的主症状是：%1$s</string>
+    <string name="main_step">阶段</string>
+    <string name="plan_txt">合理制定抗癌计划，有备无患</string>
+    <string name="wx_tips">【温馨提示】</string>
+    <string name="plan_drugs">【计划用药】</string>
+    <string name="tips">乐观对待病情是抗癌的第一步，营养与运动结合能大幅度提高患者免疫力</string>
+    <string name="advice_tips">最近是否有“%1$s”？如果是的话，小医生建议您快速将病治好，以免让癌细胞有机可乘</string>
+    <string name="digit_desc_txt">根据上述资料你处的分期是：%1$s</string>
+    <string name="case_desc">方案描述</string>
+    <string name="refer_usage">参考用法</string>
+    <string name="none">无</string>
+    <string name="last_target">最后有效的靶向药</string>
+    <string name="chemistry">最后有效的化疗药</string>
+    <string name="body_status">身体状况</string>
+    <string name="find_plan">查看解决办法</string>
+    <string name="use_now">立即用药</string>
+    <string name="login_failed">登录失败</string>
+    <string name="release_pos">我要发布到:%1$s</string>
+    <string name="title_activity_my_flw_forum">MyFlwForumActivity</string>
+    <string name="my_flw">我的收藏</string>
+    <string name="flw_success">收藏成功</string>
+    <string name="wszl_txt">资料越完善，可参考的方案越精准</string>
+    <string name="wszl_gene">肿瘤进展或伴随基因改变，请慎重选择</string>
+    <string name="foucs_circle">关注的圈子</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+
+    <!--关于的字段  -->
+    <string name="about">关于</string>
+    <string name="about_txt1">用爱抗癌，与癌共舞</string>
+    <string name="about_txt2">抗癌圈宗旨</string>
+    <string name="about_txt3">抗癌圈始终以生命为本源，为癌症患者着想，除了免费的搭建高质量分享交流的平台外，我们还同时为用户提供了更精准，更有效的治疗方案，通过群众的力量，发现“与癌共存”的秘密，从而提高患者生活质量。</string>
+    <string name="about_txt4">泽源网络文化理念</string>
+    <string name="about_txt5">一、泽愿的愿景</string>
+    <string name="about_txt6">（整合）创新医疗，（用心）服务社会</string>
+    <string name="about_txt7">二、泽愿的价值观</string>
+    <string name="about_txt8">善正、开放、精进、共享。</string>
+    <string name="about_txt9">三、泽愿的发心</string>
+    <string name="about_txt10">同理心！\n慈悲心！\n利他心！</string>
+    <string name="about_txt11">四、泽愿的发愿</string>
+    <string name="about_txt12">为病人而战！\n为家属而战！\n为人类而战！</string>
+    <string name="about_txt13">五、泽愿的目标</string>
+    <string name="about_txt14">让医疗更安心、有效、开心、省钱！</string>
+
+
+    <string name="choose_sex">请选择性别</string>
+    <string name="from_pic">从相册中获取</string>
+    <string name="man">男</string>
+    <string name="women">女</string>
+    <string name="discovertime">请选择确诊时间</string>
+    <string name="beijing">北京</string>
+    <string name="circle_textsize">深圳圈</string>
+    <string name="no_data">未知</string>
+    <string name="choose_cure_case">请选择治疗方式</string>
+    <string name="cancle">取消</string>
+    <string name="froum_list">帖子列表</string>
+    <string name="forum_num">贴子:</string>
+    <string name="person_num">人数:</string>
+    <string name="has_focus">已关注</string>
+    <string name="need_focus">加关注</string>
+    <string name="no_datas">未填写</string>
+    <string name="choose_time">请选择时间</string>
+    <string name="choose_symptom">请选择症状</string>
+    <string name="transpos_status">转移情况</string>
+    <string name="main_cancer_pos">主肿瘤</string>
+    <string name="add_step">添加阶段</string>
+    <string name="cancer_length">肿瘤长度(mm)</string>
+    <string name="cancer_width">肿瘤宽度(mm)</string>
+    <string name="choose_no_photo">没有选择图片</string>
+    <string name="no_result_cure">未找到治疗方案</string>
+
+    <!-- 这个是没有数据的文本-->
+    <string name="no_follow_tv1">你还没有收藏哦</string>
+    <string name="no_follow_tv2">赶快去圈子逛逛吧~~</string>
+    <string name="no_follow_tv3">去圈子</string>
+
+
+    <string name="no_reply_tv1">还没有人评论</string>
+    <string name="no_reply_tv2">加油跟帖抢沙发</string>
+    <string name="no_reply_tv3">去圈子</string>
+
+    <string name="empty_dignose1">暂无诊断结果</string>
+
+
+    <string name="empty_forum_tv1">你还没有发布帖子</string>
+    <string name="empty_forum_tv2">去发一篇吧~~</string>
+    <string name="empty_forum_tv3">去发帖</string>
+
+    <string name="empty_no_data">暂无数据</string>
+    <string name="mingcheng">【名称】</string>
+    <string name="record_remark_hint">您可以输入\n 1.治疗的方法\n 2.伴随其他病症\n 3.CT结果描述\n 4.心情记录</string>
+    <string name="choose_gene_title">选择突变基因</string>
+    <string name="cea">关键指标</string>
+    <string name="cea_record">例如:CEA:3; APF:0.6</string>
+    <string name="share_content">“抗癌圈”是专门为癌症患者搭建的家园，上万抗癌战士在这里分享了他们宝贵的经验。我们还为您准备了24小时随时待命的私人医生，能快速并准确地解决80%的癌症问题。</string>
+    <string name="my_circle">我的圈子</string>
+    <string name="close">收起</string>
+    <string name="open">更多</string>
+    <string name="change_step">更改阶段</string>
+    <string name="add_symptom">添加症状</string>
+    <string name="cancer_has_no_gene">该癌种暂无基因数据</string>
+    <string name="send">发送</string>
+
+    <!-- 下面是患者详情里面的文本-->
+    <string name="patientdetail_txt1">完善资料，我们能更精准的帮助您回复健康</string>
+    <string name="patientdetail_txt2">您的健康是我们最大的欣慰</string>
+    <string name="transpos_txt">转移情况</string>
+    <string name="gene">突变情况</string>
+    <string name="discover_time">抗癌开始日</string>
+    <string name="digit_t">原发肿瘤情况</string>
+    <string name="digit_n">区域淋巴结情况</string>
+    <string name="digit_m">远处转移情况</string>
+    <string name="choose_case">请选择方案</string>
+    <string name="illness_anz">病情分析</string>
+    <string name="usage">用法</string>
+    <string name="case_js">方案介绍</string>
+    <string name="case_tips">备注</string>
+    <string name="confirm_symptom">确认有该症状</string>
+    <string name="main_kangfu">康复与营养</string>
+    <string name="main_effect">副作用与并发症</string>
+    <string name="main_knowledge">知识库</string>
+    <string name="version_name">版本号:</string>
+    <string name="notice">【公告栏】</string>
+
+
+</resources>

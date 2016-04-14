@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flowlayout="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.zeyuan.kyq.view.ReleaseForumActivity">
+
+    <include
+        android:id="@+id/title1"
+        layout="@layout/toorbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/title1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="@string/release_pos"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/front16" />
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@mipmap/right" />
+            </LinearLayout>
+
+            <com.zeyuan.kyq.widget.FlowLayout
+                android:id="@+id/fl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                flowlayout:horizontal_spacing="10dp"
+                flowlayout:vertical_spacing="10dp" />
+
+            <Button
+                android:id="@+id/confirm"
+                style="@style/bottom_button"
+                android:layout_width="140dp"
+                android:layout_height="@dimen/height32"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:text="@string/confirm"
+                android:textSize="@dimen/front18" />
+            <!--<CheckBox-->
+            <!--style="@style/release_forum_top_checkbox"-->
+            <!--android:text="深圳圏"/>-->
+
+            <!--<CheckBox-->
+            <!--style="@style/release_forum_top_checkbox"-->
+            <!--android:text="易瑞沙圈"/>-->
+
+            <!--<CheckBox-->
+            <!--style="@style/release_forum_top_checkbox"-->
+            <!--android:text="广州圈"/>-->
+
+            <!--<CheckBox-->
+            <!--style="@style/release_forum_top_checkbox"-->
+            <!--android:text="化疗圈"/>-->
+
+
+            <!--</LinearLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/small_margin"
+                android:text="@string/forum_tip"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/front12" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/line_color" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_height">
+
+                <EditText
+                    android:id="@+id/titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_height"
+                    android:background="@null"
+                    android:hint="@string/forum_title"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:textColorHint="@color/text_color3"
+                    android:textSize="@dimen/front16" />
+
+                <ImageView
+                    android:id="@+id/delete_bt_content"
+                    android:layout_width="@dimen/height32"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@mipmap/delete_content" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/my_top_backgroud"
+                android:minHeight="@dimen/my_top_backgroud">
+
+                <EditText
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_color"
+                    android:gravity="left"
+                    android:hint="@string/forum_content"
+                    android:minHeight="@dimen/my_top_backgroud"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/small_margin"
+                    android:textColorHint="@color/text_color3" />
+
+                <TextView
+                    android:id="@+id/delte_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height32"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@mipmap/delete_all"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:text="清除所有"
+                    android:textSize="@dimen/front10" />
+
+
+            </RelativeLayout>
+
+            <com.zeyuan.kyq.widget.MyGridView
+                android:id="@+id/show_pic"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:horizontalSpacing="@dimen/small_margin"
+                android:numColumns="4"
+                android:verticalSpacing="@dimen/small_margin" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@id/line"
+        style="@style/line_style"
+        android:layout_above="@+id/release_forum" />
+
+    <Button
+        android:id="@+id/release_forum"
+        style="@style/bottom_button"
+        android:layout_width="200dp"
+        android:text="@string/release_forum"
+        android:visibility="visible" />
+</RelativeLayout>

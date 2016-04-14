@@ -1,0 +1,336 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zeyuan.kyq.widget.MyScrollView
+        android:id="@+id/my_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.zeyuan.kyq.widget.CircleImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="8dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:padding="1dp"
+                        android:src="@mipmap/default_avatar"
+                        apps:border_color="@color/light_green"
+                        apps:border_width="1dp" />
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/current_step"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/avatar"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--android:layout_marginRight="50dp"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:background="@drawable/main_title_shape"-->
+                    <!--android:orientation="vertical"> -->
+
+                    <!--</RelativeLayout>-->
+
+                    <TextView
+                        android:id="@+id/step"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/activity_horizontal_margin"
+                        android:layout_alignTop="@+id/avatar"
+                        android:layout_marginTop="@dimen/little_margin"
+                        android:layout_toEndOf="@+id/avatar"
+                        android:layout_toRightOf="@+id/avatar"
+                        android:background="@drawable/home_dqjd_shape"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="靶向阶段"
+                        android:textColor="@color/home_viewpager_item_nick"
+                        android:textSize="@dimen/front10" />
+
+                    <TextView
+                        android:id="@+id/step_medica"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/avatar"
+                        android:layout_alignLeft="@+id/step"
+                        android:layout_alignStart="@+id/step"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/little_margin"
+                        android:text="易瑞沙"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/front14" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="8dp"
+                    android:gravity="bottom">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_toLeftOf="@+id/linearLayout"
+                        android:background="@mipmap/avatar_flower" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="抗癌"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/front12" />
+
+                    <TextView
+                        android:id="@+id/cancer_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/front24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textColor="@color/text_color_1"
+                        android:textSize="@dimen/front12" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    android:layout_below="@+id/check_itself_top"
+                    android:layout_marginTop="-64dp">
+
+                    <com.zeyuan.kyq.widget.WaveView
+                        android:id="@+id/wave"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_centerHorizontal="true" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="94dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/small_margin"
+                        android:background="@drawable/home_xiaoyisheng_bg">
+
+                        <TextView
+                            android:id="@+id/my_little_nurse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginTop="6dp"
+                            android:text="【计划用药】"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/front16" />
+
+                        <TextView
+                            android:id="@+id/drugs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/my_little_nurse"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/small_margin"
+                            android:layout_marginRight="@dimen/small_margin"
+                            android:ellipsize="end"
+                            android:lines="2"
+                            android:text="特罗凯+卡博替尼"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/front14" />
+
+
+                        <TextView
+                            android:id="@+id/change_nurse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/home_huanyihuan_selector"
+                            android:gravity="center"
+                            android:text="换一换"
+                            android:textColor="@color/white" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/use_durgs"
+                        android:layout_width="141.5dp"
+                        android:layout_height="26.5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/home_ljyy_selector"
+                        android:gravity="center"
+                        android:paddingBottom="3dp"
+                        android:text="立即用药"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/front14" />
+
+
+                    <TextView
+                        android:id="@+id/red_dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/use_durgs"
+                        android:layout_alignTop="@+id/use_durgs"
+                        android:layout_marginRight="@dimen/small_margin"
+                        android:layout_marginTop="-4dp"
+                        android:background="@drawable/red_dot_shape"
+                        android:paddingLeft="@dimen/little_margin"
+                        android:paddingRight="@dimen/little_margin"
+                        android:text="计划"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/front10" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/check_itself_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@mipmap/home_xiaohushi" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/home_wdbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableTop="@drawable/home_wdbl_selector"
+                    android:gravity="center"
+                    android:text="我的病历"
+                    android:textColor="@color/text_color_1" />
+
+                <Button
+                    android:id="@+id/home_gxjd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+
+                    android:drawableTop="@drawable/home_gxjd_selector"
+                    android:gravity="center"
+                    android:text="@string/change_step"
+                    android:textColor="@color/text_color_1" />
+
+                <Button
+                    android:id="@+id/home_tjzz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableTop="@drawable/home_tjzz_selector"
+                    android:gravity="center"
+                    android:text="@string/add_symptom"
+                    android:textColor="@color/text_color_1" />
+
+
+                <Button
+                    android:id="@+id/home_zbjl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/drawable_padding"
+                    android:drawableTop="@drawable/home_zbjl_selector"
+                    android:gravity="center"
+                    android:text="@string/index_record"
+                    android:textColor="@color/text_color_1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="@color/line_color"
+                android:clipChildren="false">
+
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vg_simalar_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="@dimen/little_margin"
+                    android:clipChildren="false" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/little_margin"
+                android:background="@color/line_color" />
+
+            <com.zeyuan.kyq.widget.MyListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null" />
+        </LinearLayout>
+
+    </com.zeyuan.kyq.widget.MyScrollView>
+
+    <TextView
+        android:id="@+id/check_itself"
+        android:layout_width="70dp"
+        android:layout_height="56dp"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/smart_doctor"
+        android:visibility="gone" />
+
+    <ProgressBar style="@style/progressbar_style" />
+
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/line_color"
+    tools:context="com.zeyuan.kyq.view.StepDetailActivity">
+
+
+    <include
+        android:id="@+id/title1"
+        layout="@layout/toorbar" />
+
+
+    <ExpandableListView
+        android:background="@color/listview_dv_item"
+        android:id="@+id/expendlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/rl1"
+        android:layout_below="@id/title1"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:scrollbars="none" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--<FrameLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<Button-->
+            <!--android:id="@+id/edit_step"-->
+            <!--style="@style/step_detail"-->
+            <!--android:drawableTop="@drawable/stepdetail_edit_step"-->
+            <!--android:text="编辑" />-->
+            <!--</FrameLayout>-->
+
+            <!--<FrameLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1">-->
+
+            <!--<Button-->
+            <!--android:id="@+id/share_step"-->
+            <!--style="@style/step_detail"-->
+            <!--android:drawableTop="@drawable/stepdetail_share_step"-->
+            <!--android:text="分享" />-->
+            <!--</FrameLayout>-->
+        </LinearLayout>
+
+        <View style="@style/line_style" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp">
+
+        <ImageView
+            android:id="@+id/show_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/step_details" />
+
+        <ImageView
+            android:id="@+id/inside_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/rotate_step" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

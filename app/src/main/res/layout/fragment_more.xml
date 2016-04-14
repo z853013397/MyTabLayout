@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical"
+    tools:context="com.zeyuan.kyq.fragment.main.MoreFragment">
+
+    <include layout="@layout/toorbar" />
+
+    <RelativeLayout
+        android:id="@+id/patient_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/footer_height"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@color/white">
+
+        <com.zeyuan.kyq.widget.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/default_avatar"
+            apps:border_color="@color/white"
+            apps:border_width="1dp" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/avatar"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_toRightOf="@id/avatar"
+            android:text="Robin"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/front22" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/right" />
+
+        <TextView
+            android:id="@+id/name_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/avatar"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_toRightOf="@id/avatar"
+            android:text="微信登录"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/front10" />
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:background="@color/white"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="20dp">-->
+
+    <!--<TextView-->
+    <!--android:text="@string/patient_detail"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:textSize="20sp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/to_patient_detail"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+    <!--android:background="@color/white"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginTop="20dp">-->
+
+    <!--<TextView-->
+    <!--android:text="@string/use_help"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:textSize="20sp"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/to_help"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--</RelativeLayout>-->
+
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:id="@+id/to_recommend_friend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_main_height"
+        android:layout_marginTop="@dimen/small_margin"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/recommend_friend"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/front18" />
+
+        <ImageView
+            android:id="@+id/to_recommend_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/right"
+            android:textColor="@color/text_color2" />
+    </RelativeLayout>
+
+    <View style="@style/line_style" />
+
+    <RelativeLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_main_height"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:text="@string/about"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/front18" />
+
+        <!--<ImageView-->
+        <!--android:id="@+id/to_about"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent" />-->
+        <ImageView
+            android:id="@+id/to_about"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+    <View style="@style/line_style" />
+
+</LinearLayout>

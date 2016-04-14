@@ -1,0 +1,466 @@
+<resources>
+
+    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowBackground">@color/window_backgroud</item>
+        <item name="colorPrimaryDark">@color/light_green</item>
+        <item name="colorAccent">@color/light_green</item>
+        <item name="colorPrimary">@color/light_green</item>
+    </style>
+
+
+    <style name="GgzWindowAnim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/ggz_imge_scale_in</item>
+        <item name="android:windowExitAnimation">@anim/ggz_imge_scale_out</item>
+    </style>
+    <!-- 显示大图片 -->
+    <style name="GgzImageScale" parent="@style/BaseAppTheme">
+        <item name="android:windowAnimationStyle">@style/GgzWindowAnim</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowFullscreen">false</item>
+        <!-- 设置全屏显示 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+
+    <style name="AppTheme.NoTitle" parent="BaseAppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="layout_wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="layout_ww_hm">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="laout_width_weigth">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <style name="dialog" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        <!--  边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!--从底部进入的idalog动画-->
+    <style name="mystyle" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/anim_exit_dialog</item>
+    </style>
+
+
+    <!-- 这个是患者详情中 真实姓名 年龄 和所在地的 textview样式-->
+    <style name="patient_detail_top_textview_style">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+
+    <!-- 患者详情中 癌症种类左边字体-->
+    <style name="patient_detail_left_textview_style">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/main_height2</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textSize">@dimen/front16</item>
+        <item name="android:textColor">@color/text_color2</item>
+    </style>
+
+
+    <!-- 患者详情中 癌症种类右边字体-->
+    <style name="patient_detail_right_textview_style">
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:textSize">@dimen/front14</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/main_height2</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- 抽取的共性-->
+    <style name="ave_width">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <style name="circle_header_button" parent="ave_width">
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">@dimen/front10</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 这个是我的界面中显示圈子的按钮所抽出来的共性-->
+    <style name="my_button_style">
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height26</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/small_margin</item>
+        <item name="android:paddingRight">@dimen/small_margin</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:background">@drawable/myactivity_focus_circle</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <!-- 这个是症状自查 上面的按钮抽取的-->
+    <style name="find_symptom_button" parent="ave_width">
+        <item name="android:background">@drawable/find_symptom_top_radiobutton_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/front14</item>
+        <item name="android:paddingBottom">@dimen/small_margin</item>
+        <item name="android:paddingTop">@dimen/small_margin</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/green_white_selector</item>
+    </style>
+    <!-- 这个是症状自查 左面的radiobutton抽取的-->
+    <style name="find_symptom_button_left">
+        <item name="android:paddingBottom">@dimen/small_margin</item>
+        <item name="android:textSize">@dimen/front12</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/find_symptom_selector</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/footer_height</item>
+        <item name="android:textColor">@color/gray_green_selector</item>
+    </style>
+
+    <!-- 搜索圈子头部抽取-->
+    <style name="search_circle_top_radiobutton">
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/green_white_selector</item>
+    </style>
+
+
+    <style name="release_forum_top_checkbox" parent="layout_wrap_content">
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/small_padding</item>
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/releaseforum_top_radiobutton_selector</item>
+        <item name="android:textColor">@color/green_white_selector</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
+
+    <!-- 这个主页进去更多的 头部上的按钮共性-->
+    <style name="main_more_topbutton" parent="laout_width_weigth">
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/black_green_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/front14</item>
+    </style>
+
+    <style name="step_detail">
+        <item name="android:textSize">@dimen/front14</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="line_style">
+        <item name="android:background">#d8d8d8</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+    </style>
+
+    <style name="digit_switch_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/height32</item>
+        <item name="android:background">@drawable/digit_switch_selector</item>
+        <item name="android:paddingLeft">@dimen/small_margin</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingRight">@dimen/small_margin</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/front16</item>
+
+    </style>
+
+
+    <style name="patient_info">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginRight">80dp</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:textSize">@dimen/front18</item>
+        <item name="android:background">@drawable/pi_next_step_selector</item>
+    </style>
+
+    <style name="patient_info_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/main_height</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:background">@drawable/choose_type_selector</item>
+        <item name="android:drawableRight">@drawable/patient_down_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/white_whitegay_selector</item>
+        <item name="android:textSize">@dimen/front22</item>
+
+
+    </style>
+
+    <style name="patient_info_left_tv" parent="layout_ww_hm">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/front18</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="patient_info_right_tv" parent="layout_ww_hm">
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textSize">@dimen/front18</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+        <item name="android:drawableRight">@mipmap/add_symptom_down</item>
+    </style>
+
+    <style name="guide_textview" parent="layout_wrap_content">
+        <!--<item name="android:layout_marginTop">@dimen/margintop25</item>-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/front22</item>
+        <item name="android:layout_centerInParent">true</item>
+        <!--<item name="android:layout_marginLeft">35dp</item>-->
+        <!--<item name="android:layout_marginRight">35dp</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:paddingLeft">55dp</item>-->
+        <!--<item name="android:paddingRight">55dp</item>-->
+
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+
+    <style name="guide_image" parent="layout_wrap_content">
+        <!--<item name="android:layout_centerVertical">true</item>-->
+
+    </style>
+
+
+    <style name="guide_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/main_height</item>
+        <item name="android:layout_marginLeft">@dimen/height32</item>
+        <item name="android:layout_marginRight">@dimen/height32</item>
+        <!--<item name="android:layout_marginTop">@dimen/margintop25</item>-->
+    </style>
+
+
+    <style name="mProgress_style">
+        <item name="android:indeterminateDrawable">@anim/loading</item>
+        <item name="android:minHeight">122dp</item>
+        <item name="android:maxHeight">122dp</item>
+        <item name="android:minWidth">113dp</item>
+        <item name="android:maxWidth">113dp</item>
+    </style>
+
+    <!-- 这个是我的 所在的标题抽取的-->
+    <style name="my_title_left" parent="layout_wrap_content">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/main_bottom_color</item>
+        <item name="android:textSize">@dimen/front18</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding</item>
+    </style>
+
+    <style name="my_title_right" parent="my_title_left">
+        <item name="android:drawableRight">@mipmap/right</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+
+    <!--这2个是custom progredialog 的样式-->
+    <style name="CustomDialog" parent="@android:style/Theme.Holo.DialogWhenLarge">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <!--这个background是设置背景颜色的 可以设置一个drawable-->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@color/dialog_backgroud</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!--底部button风格-->
+    <style name="bottom_button">
+        <item name="android:layout_width">@dimen/bottom_button_width</item>
+        <item name="android:layout_height">@dimen/height32</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/small_margin</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:background">@drawable/find_symptom_top_radiobutton_shape_selector</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/front18</item>
+    </style>
+
+
+    <style name="drug_detail_top_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">9dp</item>
+        <item name="android:layout_marginTop">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/text_color_1</item>
+        <item name="android:textSize">@dimen/front18</item>
+    </style>
+
+    <style name="drug_detail_bottom_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:textColor">@color/text_color2</item>
+        <item name="android:textSize">@dimen/front16</item>
+    </style>
+
+    <style name="checkbox_style">
+        <item name="android:background">@drawable/checkbox_style</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="about_textview_style1">
+        <item name="android:textSize">@dimen/front18</item>
+        <item name="android:textColor">@color/text_color_1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/activity_horizontal_margin</item>
+    </style>
+
+
+    <style name="edit_style">
+        <item name="android:textColorHint">@color/text_color4</item>
+    </style>
+
+
+    <style name="empty_result_detail_tv">
+        <item name="android:layout_alignLeft">@+id/tv1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/front14</item>
+        <item name="android:textColor">@color/text_color2</item>
+    </style>
+
+
+    <style name="empty_lightgreen_textview">
+        <item name="android:paddingLeft">@dimen/small_margin</item>
+        <item name="android:paddingRight">@dimen/small_margin</item>
+        <item name="android:paddingTop">@dimen/little_margin</item>
+        <item name="android:paddingBottom">@dimen/little_margin</item>
+        <item name="android:background">@drawable/circle_shape_light_green</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_green</item>
+    </style>
+
+
+    <style name="about_content_textstyle" parent="@style/about_textview_style1">
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:textSize">@dimen/front16</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/text_color2</item>
+    </style>
+
+    <style name="empty_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height32</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+
+    <style name="step_detail_left_txt">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="step_detail_right_txt">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:textColor">@color/light_green</item>
+    </style>
+
+
+    <style name="progressbar_style" >
+        <item name="android:id">@+id/pd</item>
+        <item name="android:layout_width">@dimen/progressbar_width</item>
+        <item name="android:layout_height">@dimen/progressbar_width</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_gravity">center</item>
+
+    </style>
+
+</resources>

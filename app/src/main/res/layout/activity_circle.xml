@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/whole_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/toorbar"
+            layout="@layout/toorbar" />
+
+
+        <include
+            android:id="@+id/circle_name"
+            layout="@layout/item_find_circle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toorbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/little_margin"
+            android:background="@color/main_color" />
+
+        <com.zeyuan.kyq.widget.xlistview.XListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/circle_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:divider="@color/main_color"
+            android:dividerHeight="@dimen/small_margin" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pd"
+        style="@style/mProgress_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateDuration="1200" />
+</FrameLayout>

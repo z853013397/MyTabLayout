@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_green"
+    android:orientation="vertical">
+
+    <include layout="@layout/toorbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="当前治疗方案"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="极大的提高治疗方案的准确度"
+        android:textColor="@color/white"
+        android:textSize="20sp"/>
+
+    <!--<Button-->
+        <!--android:id="@+id/current_case"-->
+        <!--style="@style/patient_info_button"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:text="当前治疗方案"/>-->
+    <com.zeyuan.kyq.widget.DoubleTvLayout
+        android:id="@+id/current_case"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        app:left_txt="当前治疗方案" />
+
+    <!--<Button-->
+        <!--android:id="@+id/case_time"-->
+        <!--style="@style/patient_info_button"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:text="方案开始时间"/>-->
+    <com.zeyuan.kyq.widget.DoubleTvLayout
+        android:id="@+id/case_time"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        app:left_txt="方案开始时间" />
+    <com.zeyuan.kyq.widget.DoubleTvLayout
+        android:id="@+id/is_effect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        app:left_txt="方案是否有效" />
+    <!--<Button-->
+        <!--android:id="@+id/is_effect"-->
+        <!--style="@style/patient_info_button"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:text="方案是否有效"/>-->
+    <Button
+        android:id="@+id/next_step1"
+        style="@style/patient_info"
+        android:layout_marginTop="65dp"
+        android:text="完成"
+        android:visibility="visible"/>
+</LinearLayout>

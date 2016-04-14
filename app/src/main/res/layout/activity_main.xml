@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_style" />
+
+    <RadioGroup
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_main"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/mainactivity_bottom_main_button_selector"
+            android:gravity="center"
+            android:text="@string/main"
+            android:textColor="@color/green_red_selector"
+            android:textSize="@dimen/front12" />
+
+        <RadioButton
+            android:id="@+id/btn_circle"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/mainactivity_bottom_circle_button_selector"
+            android:gravity="center"
+            android:text="@string/circle"
+            android:textColor="@color/green_red_selector"
+            android:textSize="@dimen/front12" />
+
+        <RadioButton
+            android:id="@+id/btn_more"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:button="@null"
+            android:drawableTop="@drawable/mainactivity_bottom_more_button_selector"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textColor="@color/green_red_selector"
+            android:textSize="@dimen/front12" />
+    </RadioGroup>
+
+</LinearLayout>

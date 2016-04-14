@@ -1,0 +1,245 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.zeyuan.kyq.widget.MyLayout
+        android:id="@+id/whole_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/title1"
+            layout="@layout/toorbar" />
+
+        <com.zeyuan.kyq.widget.MyScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_bottom"
+            android:layout_below="@id/title1"
+            android:layout_weight="1"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/scroll_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--<include-->
+                    <!-- -->
+                    <!--android:id="@+id/circle_head"-->
+                    <!--layout="@layout/item_find_circle" />-->
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/small_margin"
+
+                        android:background="@color/main_color" />
+
+
+                    <include
+                        android:id="@+id/host_member"
+                        layout="@layout/include_forum_detail_each_member" />
+
+
+                    <TextView
+                        android:id="@+id/forum_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/title_color"
+                        android:textSize="@dimen/front24" />
+
+                    <View
+                        style="@style/line_style"
+                        android:layout_marginTop="14dp" />
+
+                    <TextView
+                        android:id="@+id/forum_content"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:lineSpacingExtra="8dp"
+                        android:lineSpacingMultiplier="1.0"
+                        android:textColor="@color/item_forum_title"
+                        android:textSize="@dimen/front18" />
+
+
+                    <com.zeyuan.kyq.widget.MyGridView
+                        android:id="@+id/gridview"
+                        android:layout_width="@dimen/grid_width"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:horizontalSpacing="@dimen/small_margin"
+                        android:numColumns="4"
+                        android:verticalSpacing="@dimen/small_margin" />
+
+
+                    <!--<Button-->
+                    <!--android:id="@+id/patient_detail"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="@dimen/margintop25"-->
+                    <!--android:background="@drawable/patient_detail_selector"/>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="@dimen/margintop5"-->
+                    <!--android:text="@string/patient_bingli"/>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="@dimen/margintop5"-->
+                    <!--android:text="@string/click_patientbingli"/>-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/huifu_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_height"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="@string/the_all_huifu"
+                    android:textSize="@dimen/front18" />
+
+                <com.zeyuan.kyq.widget.MyListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/line_color"
+                    android:dividerHeight="1dp" />
+            </LinearLayout>
+        </com.zeyuan.kyq.widget.MyScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minHeight="@dimen/main_height"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:maxHeight="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_toLeftOf="@+id/message"
+                android:layout_weight="1"
+                android:background="@drawable/forumdetial_boootm_editext_reply_shape"
+                android:drawableLeft="@mipmap/write_reply"
+                android:hint="@string/want_say"
+                android:paddingRight="@dimen/small_margin"
+                android:textColorHint="@color/text_color4"
+                android:textSize="@dimen/front16" />
+
+            <!--<ImageButton-->
+            <!--android:id="@+id/forum_share"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="@dimen/marginright30"-->
+            <!--android:background="@mipmap/forum_share"/>-->
+
+            <CheckBox
+                android:id="@+id/connection_forum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/conllection"
+                android:button="@null"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@mipmap/message" />
+
+                <TextView
+                    android:id="@+id/message_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/message"
+                    android:layout_alignTop="@id/message"
+                    android:layout_marginRight="-8dp"
+                    android:layout_marginTop="-8dp"
+                    android:background="@drawable/forum_detial_boootm_number_reply_shape"
+                    android:paddingLeft="@dimen/little_width"
+                    android:paddingRight="@dimen/little_width"
+                    android:text="125"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/front10" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/send_message"
+                style="@style/digit_switch_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/small_margin"
+                android:paddingBottom="@dimen/little_margin"
+                android:paddingTop="@dimen/little_margin"
+                android:text="@string/send"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </com.zeyuan.kyq.widget.MyLayout>
+
+    <ProgressBar style="@style/progressbar_style" />
+
+</FrameLayout>
