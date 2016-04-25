@@ -1,1 +1,1 @@
-include ':app', ':mytablelayout'
+include ':app', ':mytablelayout', ':customview', ':jsdemo'

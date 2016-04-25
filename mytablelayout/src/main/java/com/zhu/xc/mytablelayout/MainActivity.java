@@ -12,16 +12,18 @@ import android.widget.LinearLayout;
 
 import java.util.LinkedList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements LinearLayoutHelper.OnPositionListerner {
     private static final String TAG = "MainActivity";
     private ViewPager mViewPager;
     private MyTabLayout tabLayout;
     int displayWidth;
     private LinearLayout linearLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        finish();
         //setContentView(new MyTabLayout(MainActivity.this));
         initView();
         displayWidth = getWindowManager().getDefaultDisplay().getWidth();
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) MainActivity.this.findViewById(R.id.vg);
         linearLayout = (LinearLayout) findViewById(R.id.ll_content);
         LinearLayoutHelper helper = new LinearLayoutHelper(linearLayout);
-
+        helper.setOnPositionListernen(this);
 //        tabLayout = (MyTabLayout) findViewById(R.id.table_layout);
 //        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
 //        tabLayout.set
@@ -47,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
         helper.setupWithViewPager(mViewPager);
 //        tabLayout.setupWithViewPager(mViewPager);
 //        tabLayout.setPositionColor(4);
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                //耗时操作
+//            }
+//        }).start();
     }
 
 
@@ -58,14 +67,28 @@ public class MainActivity extends AppCompatActivity {
 //        CopyOnWriteArrayList
     }
 
-    private int[] resource = {R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e, R.mipmap.f, R.mipmap.g, R.mipmap.h};
+    private int[] resource = {R.mipmap.a, R.mipmap.b, R.mipmap.c, R.mipmap.d, R.mipmap.e
+            , R.mipmap.f, R.mipmap.g, R.mipmap.h, R.mipmap.i, R.mipmap.img1
+            , R.mipmap.img2, R.mipmap.img3, R.mipmap.img4};
+
+    @Override
+    public void getCurrentPosition(int position) {
+        Log.i(TAG, "当前的位置是：" + position);
+    }
+
+    @Override
+    public void getLastPostion(int position) {
+        Log.i(TAG, "上一个位置是：" + position);
+
+    }
     // private ImageView[] images;
 
     class MyPagerAdapter extends PagerAdapter {
         @Override
         public CharSequence getPageTitle(int position) {
-            return resource[position]+"";
+            return resource[position] + "";
         }
+
         @Override
         public int getCount() {
             return resource.length;
