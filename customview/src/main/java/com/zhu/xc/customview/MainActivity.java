@@ -1,61 +1,61 @@
 package com.zhu.xc.customview;
 
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.GridView;
+import android.widget.SimpleAdapter;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+public class MainActivity extends Activity implements View.OnClickListener, AdapterView.OnItemClickListener {
+    private GridView gridview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-//        setContentView(new CirCleChangeView(this));
-        setContentView(R.layout.activity_main);
-        CirCleChangeView view = (CirCleChangeView) this.findViewById(R.id.view);
-        ObjectAnimator animator = ObjectAnimator.ofFloat(view,"radius",0f,300f,0f);
-//        ObjectAnimator.ofFloat(view,"radius",0f,300f).start();
-        animator.setDuration(3000);
-        animator.setRepeatCount(200);
-        animator.start();
+        setContentView(R.layout.gridview);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+//准备要添加的数据条目
+        List<Map<String, Object>> items = new ArrayList<Map<String,Object>>();
+        for (int i = 0; i < 11; i++) {
+            Map<String, Object> item = new HashMap<String, Object>();
+            item.put("imageItem", R.mipmap.ic_launcher);
+            item.put("textItem", "text" + i);
+            items.add(item);
+        }
+//实例化一个适配器
+        SimpleAdapter adapter = new SimpleAdapter(this, items, R.layout.grid_item, new String[]{"imageItem", "textItem"}, new int[]{R.id.image_item, R.id.text_item});
+        //获得GridView实例
+        gridview = (GridView)findViewById(R.id.mygridview);
+        //gridview.setNumColumns(3);//可以在xml中设置
+        //gridview.setGravity(Gravity.CENTER);//同上
+//将GridView和数据适配器关联
+        gridview.setAdapter(adapter);
+
+        gridview.setOnItemClickListener(this);
+//        gridview.setStretchMode(GridView.STRETCH_SPACING);
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    public void onClick(View v) {
+
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        if(view.getTranslationX() != 500 ) {
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+            ObjectAnimator.ofFloat(view, "translationX", 20, 500).start();
+        }else {
+            ObjectAnimator.ofFloat(view, "translationX", 500, 20).start();
         }
 
-        return super.onOptionsItemSelected(item);
     }
 }
+

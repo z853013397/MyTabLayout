@@ -3,6 +3,7 @@ package com.zeyuan.kyq.view;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.zeyuan.kyq.R;
 import com.zeyuan.kyq.app.BaseActivity;
 import com.zeyuan.kyq.utils.DataUtils;
@@ -17,6 +18,8 @@ public class AboutActivity extends BaseActivity {
         TextView versionName = (TextView) findViewById(R.id.version_name);
         String name = DataUtils.getVersionName(this);
         versionName.setText(getString(R.string.version_name) + name);
+//        Glide.get(this).clearDiskCache();
+//        Glide.get(this).clearMemory();
     }
 
 }

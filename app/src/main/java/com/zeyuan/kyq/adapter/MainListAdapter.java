@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 import com.zeyuan.kyq.R;
 import com.zeyuan.kyq.bean.MainPageInfoBean;
@@ -152,7 +153,7 @@ public class MainListAdapter extends BaseAdapter {
 
             String title = itemEntity.getTitle();
             if (!TextUtils.isEmpty(imgUrl)) {
-                Picasso.with(mContext).load(imgUrl)
+                Glide.with(mContext).load(imgUrl)
                         .error(R.drawable.default_img)//这个是加载失败的
                         .into(holderImg.img);
             }
@@ -181,7 +182,7 @@ public class MainListAdapter extends BaseAdapter {
             String watch = itemEntity.getReplynum();
 //            LogUtil.i("MainActivity","watch is :" + watch);
             if (!TextUtils.isEmpty(imgUrl)) {
-                Picasso.with(mContext).load(imgUrl)
+                Glide.with(mContext).load(imgUrl)
 //                    .signature(new IntegerVersionSignature(1))
                         .error(R.drawable.default_img)//这个是加载失败的
                         .into(holderCommon.img);

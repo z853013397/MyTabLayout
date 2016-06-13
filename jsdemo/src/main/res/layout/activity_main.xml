@@ -15,6 +15,7 @@
     <Button
         android:onClick="onClick"
         android:text="调用js"
+        android:elevation="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

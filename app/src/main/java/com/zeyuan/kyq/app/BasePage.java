@@ -1,6 +1,7 @@
 package com.zeyuan.kyq.app;
 
 import android.content.Context;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -22,7 +23,6 @@ public abstract class BasePage {
     }
 
     public abstract View getView (LayoutInflater inflater);
-
     public abstract void initView (View rootView);
 
 

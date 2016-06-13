@@ -1,5 +1,10 @@
 package com.zhu.xc.jsdemo;
 
+import android.graphics.Bitmap;
+import android.graphics.Path;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -8,6 +13,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.CheckBox;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,8 +29,11 @@ public class MainActivity extends AppCompatActivity {
     private void showWebView() {
 //        mWebView = new WebView(this);
         mWebView = (WebView) this.findViewById(R.id.webview);
+//        Path p = new Path();
+//        p.quadTo();
 //        setContentView(mWebView);
 //        mWebView.requestFocus();
+//        layout.setLayoutMode();
         mWebView.setWebChromeClient(new WebChromeClient(){
             @Override
             public void onProgressChanged(WebView view, int newProgress) {
@@ -71,9 +80,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
+    DrawerLayout layout;
 
-
-
+    NavigationView view;
             /**
              * java 调用 js 中的方法
              */
@@ -114,5 +123,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "clickBtn2", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void drawBitmap() {
+//        Bitmap.createBitmap()
     }
 }

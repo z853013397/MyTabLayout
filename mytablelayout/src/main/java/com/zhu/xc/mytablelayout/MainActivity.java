@@ -1,6 +1,7 @@
 package com.zhu.xc.mytablelayout;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements LinearLayoutHelpe
         //setContentView(new MyTabLayout(MainActivity.this));
         initView();
         displayWidth = getWindowManager().getDefaultDisplay().getWidth();
+//        mViewPager.setCurrentItem();
     }
 
     private void initView() {
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements LinearLayoutHelpe
 //        mViewPager.addOnPageChangeListener(listener);
         mViewPager.setAdapter(adapter);
         helper.setupWithViewPager(mViewPager);
+
 //        tabLayout.setupWithViewPager(mViewPager);
 //        tabLayout.setPositionColor(4);
 

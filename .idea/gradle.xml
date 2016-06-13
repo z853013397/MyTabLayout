@@ -9,18 +9,26 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animation" />
+            <option value="$PROJECT_DIR$/animatordemo" />
+            <option value="$PROJECT_DIR$/animatordemo2" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/jsdemo" />
+            <option value="$PROJECT_DIR$/mvpdemo" />
             <option value="$PROJECT_DIR$/mytablelayout" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animation" />
+            <option value="$PROJECT_DIR$/animatordemo" />
+            <option value="$PROJECT_DIR$/animatordemo2" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/customview" />
             <option value="$PROJECT_DIR$/jsdemo" />
+            <option value="$PROJECT_DIR$/mvpdemo" />
             <option value="$PROJECT_DIR$/mytablelayout" />
           </set>
         </option>
